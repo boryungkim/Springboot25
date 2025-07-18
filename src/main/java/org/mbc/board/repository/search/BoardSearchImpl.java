@@ -93,7 +93,8 @@ public class BoardSearchImpl extends QuerydslRepositorySupport implements BoardS
 
         this.getQuerydsl().applyPagination(pageable, query); // 페이징처리용 코드 + 쿼리문
 
-
+        // Page<t> 클래스는 3가지의 리턴 타입을 만들어 준다.
+        
         List<Board> list = query.fetch(); // 쿼리문 실행
 
         long count = query.fetchCount() ; // 검색된 게시물 수
@@ -119,13 +120,11 @@ public class BoardSearchImpl extends QuerydslRepositorySupport implements BoardS
         //        b1_0.bno desc
         //    limit
         //        ?, ?
-
-
-
+        
         return new PageImpl<>(list, pageable, count);
-        //            리턴      검색된 결과 board
-        //                             페이징처리용
-        //                                   검색된 개수
+        //         리턴      검색된결과 board 
+        //                          페이징처리용
+        //                                    검색된 개수
     }
 
 
