@@ -31,7 +31,7 @@ repositories {
 
 dependencies {
     /* 메이븐 리포지토리에서 코드를 가져와 코끼리를 누르면 가져온다. */
-    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' /* 프론트 관련 */
     implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:3.1.0' /* 프론트 레이아웃 관련*/
 
@@ -53,6 +53,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'  /* 데이터 베이스 관련*/
     runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'                      /* 마리아 db 드라이버 */
 
+    implementation 'org.springframework.boot:spring-boot-starter-validation' /* p487 추가 서버에서 검증용 */
     testImplementation 'org.springframework.boot:spring-boot-starter-test'  /* 테스트 junit 메서드 단위 테스트 */
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'            /* junit용 코드 */
 
